@@ -1,38 +1,72 @@
 .App {
-  text-align: center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  padding: 24px;
+  max-width: 880px;
+  margin: 0 auto;
+  color: #000; /* default text black */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+h1 { margin: 0 0 16px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.uploader {
   display: flex;
-  flex-direction: column;
+  gap: 12px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #111827;
+  background: #111827;
+  color: #fff;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.summary { margin-top: 20px; }
+
+.section {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #e0f2fe; /* light blue background */
 }
+
+.section-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000; /* black heading text */
+}
+
+.section-body {
+  padding: 10px 12px;
+  background: #e0f2fe; /* same light blue background */
+  border-top: 1px solid #e5e7eb;
+  color: #000; /* black text inside body */
+}
+
+.section-body ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.kv { display: grid; gap: 6px; }
+.kv-row { display: grid; grid-template-columns: 180px 1fr; gap: 12px; }
+.kv-key { font-weight: 600; color: #000; } /* black key text */
+.kv-val { color: #000; } /* black value text */
